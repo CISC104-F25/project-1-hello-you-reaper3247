@@ -1,8 +1,95 @@
-[gd_scene load_steps=2 format=3 uid="uid://4sy4oeoj170"]
+[gd_scene load_steps=16 format=3 uid="uid://4sy4oeoj170"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_vq3a5"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_vq3a5"]
 
-[node name="Part_B" type="Node3D"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gn0ur"]
+albedo_color = Color(0.2505, 0.172517, 0.0999118, 1)
 
-[node name="PlaceholderCube" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_vq3a5")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6u1k"]
+albedo_color = Color(0.25098, 0.172549, 0.0980392, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nsn63"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_id878"]
+albedo_color = Color(0.596078, 0.603922, 0.403922, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3sstj"]
+albedo_color = Color(1, 0.807843, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y244p"]
+albedo_color = Color(0.596078, 0.603922, 0.403922, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2i18j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3a1t7"]
+albedo_color = Color(0.596078, 0.603922, 0.403922, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cm7y8"]
+albedo_color = Color(0.596078, 0.603922, 0.403922, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hvux6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wstyt"]
+albedo_color = Color(0.596078, 0.603922, 0.403922, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rx4g3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q10ca"]
+albedo_color = Color(0.596078, 0.603922, 0.403922, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tene2"]
+albedo_color = Color(0.596078, 0.603922, 0.403922, 1)
+
+[node name="Steampunk Lego" type="Node3D"]
+
+[node name="Hat" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.56, 0, 0, 0, 1, 0, 5.95726, 0)
+mesh = SubResource("CylinderMesh_vq3a5")
+surface_material_override/0 = SubResource("StandardMaterial3D_gn0ur")
+
+[node name="Hat Rim" type="MeshInstance3D" parent="Hat"]
+transform = Transform3D(1.89521, 0, 0, 0, 0.0414851, 0, 0, 0, 1.84912, 0, -1.01989, 0)
+mesh = SubResource("CylinderMesh_vq3a5")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_u6u1k")
+
+[node name="Neck" type="MeshInstance3D" parent="Hat"]
+transform = Transform3D(1.65274, 0, 0, 0, 1, 0, 0, 0, 1.4078, 0, -3.54432, 0)
+mesh = SubResource("BoxMesh_nsn63")
+surface_material_override/0 = SubResource("StandardMaterial3D_id878")
+
+[node name="Head" type="MeshInstance3D" parent="Hat"]
+transform = Transform3D(1.25, 0, 0, 0, 1, 0, 0, 0, 1.25, 0, -2, 0)
+mesh = SubResource("CylinderMesh_vq3a5")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_3sstj")
+
+[node name="Body" type="MeshInstance3D" parent="Hat"]
+transform = Transform3D(1.9039, 0, 0, 0, 2.79096, 0, 0, 0, 1.4078, 0, -5.25882, 0)
+mesh = SubResource("BoxMesh_nsn63")
+surface_material_override/0 = SubResource("StandardMaterial3D_y244p")
+
+[node name="Left Arm" type="MeshInstance3D" parent="Hat"]
+transform = Transform3D(0.972783, 0.303334, -0.126322, -0.189679, 1.7383, -0.029654, 0.212599, 0.162932, 0.551552, -0.994385, -4.98649, -0.0230072)
+mesh = SubResource("CylinderMesh_2i18j")
+surface_material_override/0 = SubResource("StandardMaterial3D_3a1t7")
+
+[node name="Right Arm" type="MeshInstance3D" parent="Hat"]
+transform = Transform3D(0.972783, -0.303334, 0.126322, 0.189679, 1.73829, -0.029654, -0.212599, 0.162932, 0.551552, 1.0062, -4.98649, -0.0230072)
+mesh = SubResource("CylinderMesh_2i18j")
+surface_material_override/0 = SubResource("StandardMaterial3D_cm7y8")
+
+[node name="Hips" type="MeshInstance3D" parent="Hat"]
+transform = Transform3D(-5.29794e-08, -1, 0, 1.21203, -4.37114e-08, 0, 0, 0, 1.48098, -0.0162287, -6.89399, 0.0286338)
+mesh = SubResource("CylinderMesh_hvux6")
+surface_material_override/0 = SubResource("StandardMaterial3D_wstyt")
+
+[node name="Right Leg" type="MeshInstance3D" parent="Hat"]
+transform = Transform3D(0.970127, 0, 0, 0, 3.28999, 0, 0, 0, 1.3119, 0.470221, -8.33132, 0.0544974)
+mesh = SubResource("BoxMesh_rx4g3")
+surface_material_override/0 = SubResource("StandardMaterial3D_q10ca")
+
+[node name="Left Leg" type="MeshInstance3D" parent="Hat"]
+transform = Transform3D(0.945024, 0, 0, 0, 3.28999, 0, 0, 0, 1.3119, -0.506459, -8.33132, 0.0544974)
+mesh = SubResource("BoxMesh_rx4g3")
+surface_material_override/0 = SubResource("StandardMaterial3D_tene2")
