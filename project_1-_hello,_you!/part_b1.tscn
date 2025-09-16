@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=3 uid="uid://ctmc06ug1oiiq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hgdtp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pw8w"]
+albedo_color = Color(0.705882, 1, 0.176471, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su07c"]
+albedo_color = Color(0.705882, 1, 0.176471, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7yd5p"]
+albedo_color = Color(0.705882, 1, 0.176471, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agunj"]
+albedo_color = Color(0.705882, 1, 0.176471, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pewiq"]
+albedo_color = Color(0.705882, 1, 0.176471, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3fatg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3jfk"]
+albedo_color = Color(0.705882, 1, 0.176471, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_euwjk"]
+albedo_color = Color(0.705882, 1, 0.176471, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvuau"]
+albedo_color = Color(0.705882, 1, 0.176471, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_a68tq"]
+
+[node name="Alien" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0131378, 2.38419e-07, 0.00205612)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.47119, 0, 0, 0, 1.12611, 0, 0, 0, 1.4017, -0.169608, 2.52331, -0.423998)
+mesh = SubResource("CapsuleMesh_hgdtp")
+surface_material_override/0 = SubResource("StandardMaterial3D_0pw8w")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(-4.37114e-08, 0.765442, 0, -1.30643, -4.37114e-08, 0, 0, 0, 1, 0, 0.367744, 0.0772981)
+mesh = SubResource("CapsuleMesh_hgdtp")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_su07c")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(-7.4897e-08, 0.610956, 0, -2.2385, -3.48893e-08, 0, 0, 0, 1, 0, -1.00196, 0)
+mesh = SubResource("CapsuleMesh_hgdtp")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7yd5p")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(-4.25838e-08, 0.888776, 0, -1.27273, -5.07545e-08, 0, 0, 0, 1, 0, -1.59131, 0)
+mesh = SubResource("CapsuleMesh_hgdtp")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_agunj")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(-0.265314, 0.330318, 0.000875864, -0.169254, -0.517799, -0.000589817, 0.000557149, -0.00249978, 0.237908, -0.735635, -0.699917, 0)
+mesh = SubResource("CapsuleMesh_hgdtp")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_pewiq")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(2.02563, 0, 0, 0, 0.0798045, 0, 0, 0, 1.44798, 0, -1.85394, 0)
+mesh = SubResource("CylinderMesh_3fatg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_g3jfk")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1.17148, 0, 0, 0, 0.0798045, 0, 0, 0, 0.799292, 0.508151, -1.85394, 0.453436)
+mesh = SubResource("CylinderMesh_3fatg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_euwjk")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1.17148, 0, 0, 0, 0.0798045, 0, 0, 0, 0.799292, -0.467385, -1.85394, 0.425347)
+mesh = SubResource("CylinderMesh_3fatg")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_dvuau")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.314763, -0.000961538, -0.201651, -0.386778, -0.000782508, -0.164106, 0, -0.00426293, 0.0756075, -0.304517, 0.402502, 0.62221)
+mesh = SubResource("CylinderMesh_a68tq")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.314709, 0.000965274, -0.20161, 0.386822, -0.000782406, 0.164077, -0.000264796, 0.00426211, 0.0757803, 0.232109, 0.402502, 0.642737)
+mesh = SubResource("CylinderMesh_a68tq")

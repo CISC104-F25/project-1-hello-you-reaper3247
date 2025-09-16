@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://clhttn3a0ep70"]
+[gd_scene load_steps=3 format=3 uid="uid://clhttn3a0ep70"]
+
+[ext_resource type="Texture2D" uid="uid://d3cmjtfawxf61" path="res://icon.svg" id="1_3seef"]
+[ext_resource type="Texture2D" uid="uid://dqbo50ukqpb7p" path="res://IMG_4254.jpg" id="2_tlj50"]
 
 [node name="Part_C" type="Control"]
 layout_mode = 3
@@ -8,12 +11,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PlaceholderLabel" type="Label" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 656.0
-theme_override_font_sizes/font_size = 20
-text = "Add more labels, images, and other Control nodes to this scene to build your personal poster for Part C.
+offset_left = 161.0
+offset_top = -1.0
+offset_right = 718.0
+offset_bottom = 251.0
+theme_override_font_sizes/normal_font_size = 40
+text = "Hi! My names Omesh, some of my favorite games are Kingdom Hearts and Nioh 2 (or any soulslike game)"
 
-Remember that you may need to scroll down to \"Theme Overrides > Font Sizes\" in the Inspector 
-to make your labels big enough to read. (This is font size 20px, for reference)."
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(89, 81)
+texture = ExtResource("1_3seef")
+
+[node name="Img4254" type="Sprite2D" parent="."]
+position = Vector2(931, 175)
+scale = Vector2(0.13757, 0.133098)
+texture = ExtResource("2_tlj50")

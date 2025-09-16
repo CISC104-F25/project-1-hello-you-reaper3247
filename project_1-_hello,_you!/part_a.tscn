@@ -1,4 +1,20 @@
-[gd_scene load_steps=11 format=3 uid="uid://clwrsdsnmy3md"]
+[gd_scene load_steps=17 format=3 uid="uid://clwrsdsnmy3md"]
+
+[ext_resource type="PackedScene" uid="uid://4sy4oeoj170" path="res://part_b.tscn" id="1_to4tk"]
+[ext_resource type="PackedScene" uid="uid://clhttn3a0ep70" path="res://part_c.tscn" id="2_0jsbj"]
+[ext_resource type="PackedScene" uid="uid://ctmc06ug1oiiq" path="res://part_b1.tscn" id="2_q6bo7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q6bo7"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_eso0h"]
+sky_material = SubResource("ProceduralSkyMaterial_q6bo7")
+
+[sub_resource type="Environment" id="Environment_trumw"]
+background_mode = 2
+sky = SubResource("Sky_eso0h")
+tonemap_mode = 2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6jki"]
 
@@ -25,6 +41,13 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_j0tu7"]
 
 [node name="Part_A" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_trumw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
 
 [node name="PlaceholderFloor" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.67902, 0, 0, 0, 1, 0, 0, 0, 2.65012, 0, 0, 0)
@@ -99,3 +122,14 @@ surface_material_override/0 = SubResource("StandardMaterial3D_trumw")
 transform = Transform3D(1.3379, 1.87057e-09, 0, 5.11263e-15, -9.35287e-10, 0.614389, -1.16963e-07, 0.0213969, 2.68558e-08, 0.652034, 0.256068, 0.339898)
 mesh = SubResource("BoxMesh_j0tu7")
 surface_material_override/0 = SubResource("StandardMaterial3D_trumw")
+
+[node name="Steampunk Lego" parent="." instance=ExtResource("1_to4tk")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0.664156, 0.448438, 1.57224)
+
+[node name="Alien" parent="." instance=ExtResource("2_q6bo7")]
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0.588479, 0.454942, 1.42094)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.142422, 0, 0.989806, 0, 1, 0, -0.989806, 0, -0.142422, 2.73749, 1.08851, 1.15241)
+
+[node name="Part_C" parent="." instance=ExtResource("2_0jsbj")]
